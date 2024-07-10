@@ -10,9 +10,14 @@ import (
 
 func main() {
 
+	initConfig()
+
 	// Get values from the config
 	muxTokenID := viper.GetString("MUX_TOKEN_ID")
 	muxTokenSecret := viper.GetString("MUX_TOKEN_SECRET")
+
+	fmt.Println("Mux Token ID: ", muxTokenID)
+	fmt.Println("Mux Token Secret: ", muxTokenSecret)
 
 	// API Client Initialization
 	client := muxgo.NewAPIClient(
