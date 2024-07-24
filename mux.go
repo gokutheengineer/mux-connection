@@ -8,7 +8,7 @@ import (
 )
 
 // Function to upload a video and notify the application
-func uploadAndNotify(muxTokenID, muxTokenSecret, uploaderUserID string) {
+func UploadAndNotify(muxTokenID, muxTokenSecret, uploaderUserID string) {
 	// API Client Initialization
 	client := muxgo.NewAPIClient(
 		muxgo.NewConfiguration(

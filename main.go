@@ -19,29 +19,7 @@ func main() {
 	fmt.Println("Mux Token ID: ", muxTokenID)
 	fmt.Println("Mux Token Secret: ", muxTokenSecret)
 
-	// // API Client Initialization
-	// client := muxgo.NewAPIClient(
-	// 	muxgo.NewConfiguration(
-	// 		muxgo.WithBasicAuth(muxTokenID, muxTokenSecret),
-	// 	))
-	// // Create the Asset
-	// asset, err := client.AssetsApi.CreateAsset(muxgo.CreateAssetRequest{
-	// 	Input: []muxgo.InputSettings{
-	// 		muxgo.InputSettings{
-	// 			Url: "https://storage.googleapis.com/muxdemofiles/mux-video-intro.mp4",
-	// 		},
-	// 	},
-	// 	PlaybackPolicy: []muxgo.PlaybackPolicy{muxgo.PUBLIC},
-	// })
-
-	// // Check everything was good, and output the playback URL
-	// if err == nil {
-	// 	fmt.Printf("Playback URL: https://stream.mux.com/%s.m3u8 \n", asset.Data.PlaybackIds[0].Id)
-	// } else {
-	// 	fmt.Printf("Oh no, there was an error: %s \n", err)
-	// }
-
-	uploadAndNotify(muxTokenID, muxTokenSecret, creatorUserID)
+	UploadAndNotify(muxTokenID, muxTokenSecret, creatorUserID)
 }
 
 func initConfig() {
